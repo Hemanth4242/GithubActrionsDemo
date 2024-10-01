@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testng-results skipped="0" failed="1" ignored="0" total="1" passed="0">
+  <reporter-output>
+  </reporter-output>
+  <suite name="Suite" duration-ms="78741" started-at="2024-09-27T07:25:19Z" finished-at="2024-09-27T07:26:38Z">
+    <groups>
+      <group name="cucumber scenarios">
+        <method signature="TestRunner.scenario(io.cucumber.testng.PickleWrapper, io.cucumber.testng.FeatureWrapper)[pri:0, instance:com.qt.sid.bdd.Runner.TestRunner@62e136d3]" name="scenario" class="com.qt.sid.bdd.Runner.TestRunner"/>
+      </group> <!-- cucumber scenarios -->
+    </groups>
+    <test name="Test" duration-ms="78741" started-at="2024-09-27T07:25:19Z" finished-at="2024-09-27T07:26:38Z">
+      <class name="com.qt.sid.bdd.Runner.TestRunner">
+        <test-method status="PASS" signature="setUpClass()[pri:0, instance:com.qt.sid.bdd.Runner.TestRunner@62e136d3]" name="setUpClass" is-config="true" duration-ms="2047" started-at="2024-09-27T07:25:19Z" finished-at="2024-09-27T07:25:21Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- setUpClass -->
+        <test-method status="FAIL" signature="scenario(io.cucumber.testng.PickleWrapper, io.cucumber.testng.FeatureWrapper)[pri:0, instance:com.qt.sid.bdd.Runner.TestRunner@62e136d3]" name="scenario" duration-ms="75587" started-at="2024-09-27T07:25:21Z" data-provider="scenarios" finished-at="2024-09-27T07:26:37Z">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA["Verify user is able to select agriculture course"]]>
+              </value>
+            </param>
+            <param index="1">
+              <value>
+                <![CDATA["Optional[User is able to navigate to landing Page]"]]>
+              </value>
+            </param>
+          </params>
+          <exception class="java.lang.AssertionError">
+            <message>
+              <![CDATA[Agriculture course is Not Displayed expected [true] but found [false]]]>
+            </message>
+            <full-stacktrace>
+              <![CDATA[java.lang.AssertionError: Agriculture course is Not Displayed expected [true] but found [false]
+at org.testng.Assert.fail(Assert.java:96)
+at org.testng.Assert.failNotEquals(Assert.java:776)
+at org.testng.Assert.assertTrue(Assert.java:44)
+at com.qt.sid.stepdefinitions.TrainingSteps.i_select_low_to_high(TrainingSteps.java:49)
+at ✽.i select low to high and verify(file:///C:/Automation/SkillIndiaDigital_Web_20_Feb2024_AutomationFramework/SkillIndiaDigital_Web_28AugustCode/SkillIndiaDigital_Web_26JulyMerged/src/test/resources/features/Training.feature:11)
+]]>
+            </full-stacktrace>
+          </exception> <!-- java.lang.AssertionError -->
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- scenario -->
+        <test-method status="PASS" signature="tearDownClass()[pri:0, instance:com.qt.sid.bdd.Runner.TestRunner@62e136d3]" name="tearDownClass" is-config="true" duration-ms="681" started-at="2024-09-27T07:26:37Z" finished-at="2024-09-27T07:26:38Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- tearDownClass -->
+      </class> <!-- com.qt.sid.bdd.Runner.TestRunner -->
+    </test> <!-- Test -->
+  </suite> <!-- Suite -->
+</testng-results>
