@@ -10,7 +10,7 @@ import org.testng.annotations.DataProvider;
 import org.testng.annotations.Test;
 
 @CucumberOptions(features = "src//test//resources//features", 
-				 tags = "@TestingScenario",
+				 tags = "@Practise",
 				 dryRun = false,
 				 glue = "com/qt/sid/stepdefinitions",
 		         plugin = {"pretty",
