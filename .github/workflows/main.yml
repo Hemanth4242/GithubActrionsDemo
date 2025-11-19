@@ -20,11 +20,11 @@ jobs:
           fetch-depth: 0            # ensure full history for pushes and branch refs
           persist-credentials: true # allows pushes using GITHUB_TOKEN
 
-      - name: Set up Java 17
+      - name: Set up Java 8
         uses: actions/setup-java@v4
         with:
           distribution: 'temurin'
-          java-version: '17'
+          java-version: '8'
           cache: 'maven'
 
       - name: Show repo info (diagnostics)
@@ -42,8 +42,8 @@ jobs:
           restore-keys: |
             ${{ runner.os }}-maven-
 
-      - name: Build (compile only, no tests)
-        run: mvn -B -U -DskipTests package
+      - name: Remove cached Lombok (one-time cleanup)
+        run: rm -rf ~/.m2/repository/org/projectlombok || true
 
       - name: Run Tests
         continue-on-error: false
