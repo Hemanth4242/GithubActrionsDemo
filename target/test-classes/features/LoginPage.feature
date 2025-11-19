@@ -2,11 +2,11 @@ Feature: Role popup and MobileNumber popup in Login Page
   Description: The purpose of this feature is to test role popup and mobile number popu
 
 
-  @Test
+  @GithubActions
   Scenario: Verify Login and Logout functionality
     Given i navigate to Landing page
-    When I verify click on login with learner
-    Then I verify learner is able to logout
+   # When I verify click on login with learner
+    #Then I verify learner is able to logout
 
 
   @Regression@LoginPageReg

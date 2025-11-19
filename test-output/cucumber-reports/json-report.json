@@ -3,11 +3,11 @@
     "line": 1,
     "elements": [
       {
-        "start_timestamp": "2024-11-28T07:17:46.304Z",
+        "start_timestamp": "2025-11-19T03:40:38.812Z",
         "before": [
           {
             "result": {
-              "duration": 20070000000,
+              "duration": 5331000000,
               "status": "passed"
             },
             "match": {
@@ -15,14 +15,14 @@
             }
           }
         ],
-        "line": 14,
-        "name": "Verify user is able to login and select course",
+        "line": 6,
+        "name": "Verify Login and Logout functionality",
         "description": "",
-        "id": "user-is-able-to-navigate-to-landing-page;verify-user-is-able-to-login-and-select-course",
+        "id": "role-popup-and-mobilenumber-popup-in-login-page;verify-login-and-logout-functionality",
         "after": [
           {
             "result": {
-              "duration": 983000000,
+              "duration": 1612000000,
               "status": "passed"
             },
             "match": {
@@ -35,10 +35,10 @@
         "steps": [
           {
             "result": {
-              "duration": 11156000000,
+              "duration": 5468000000,
               "status": "passed"
             },
-            "line": 15,
+            "line": 7,
             "name": "i navigate to Landing page",
             "match": {
               "location": "com.qt.sid.stepdefinitions.HomePageSteps.i_navigateToLandingPage()"
@@ -46,7 +46,7 @@
             "after": [
               {
                 "result": {
-                  "duration": 6000000,
+                  "duration": 3000000,
                   "status": "passed"
                 },
                 "match": {
@@ -55,87 +55,20 @@
               }
             ],
             "keyword": "Given "
-          },
-          {
-            "result": {
-              "duration": 2347000000,
-              "status": "passed"
-            },
-            "line": 16,
-            "name": "i click on login button",
-            "match": {
-              "location": "com.qt.sid.stepdefinitions.PractisePageSteps.i_click_on_Login_Button()"
-            },
-            "after": [
-              {
-                "result": {
-                  "status": "passed"
-                },
-                "match": {
-                  "location": "com.qt.sid.stepdefinitions.Hooks.addScreenshot(io.cucumber.java.Scenario)"
-                }
-              }
-            ],
-            "keyword": "And "
-          },
-          {
-            "result": {
-              "duration": 2282000000,
-              "status": "passed"
-            },
-            "line": 17,
-            "name": "i select learnerParticipant",
-            "match": {
-              "location": "com.qt.sid.stepdefinitions.PractisePageSteps.i_select_LearnerParticipant()"
-            },
-            "after": [
-              {
-                "result": {
-                  "status": "passed"
-                },
-                "match": {
-                  "location": "com.qt.sid.stepdefinitions.Hooks.addScreenshot(io.cucumber.java.Scenario)"
-                }
-              }
-            ],
-            "keyword": "Then "
-          },
-          {
-            "result": {
-              "duration": 3365000000,
-              "status": "passed"
-            },
-            "line": 18,
-            "name": "i enter the mobile number",
-            "match": {
-              "location": "com.qt.sid.stepdefinitions.PractisePageSteps.i_enter_mobile_number()"
-            },
-            "after": [
-              {
-                "result": {
-                  "duration": 1000000,
-                  "status": "passed"
-                },
-                "match": {
-                  "location": "com.qt.sid.stepdefinitions.Hooks.addScreenshot(io.cucumber.java.Scenario)"
-                }
-              }
-            ],
-            "keyword": "And "
           }
         ],
         "tags": [
           {
-            "name": "@Practise"
+            "name": "@GithubActions"
           }
         ]
       }
     ],
-    "name": "User is able to navigate to landing Page",
-    "description": "  Description: The purpose of this feature is to see user can navigate to landingPage or not",
-    "id": "user-is-able-to-navigate-to-landing-page",
+    "name": "Role popup and MobileNumber popup in Login Page",
+    "description": "  Description: The purpose of this feature is to test role popup and mobile number popu",
+    "id": "role-popup-and-mobilenumber-popup-in-login-page",
     "keyword": "Feature",
-    "uri": "file:src/test/resources/features/Practise.feature",
+    "uri": "file:src/test/resources/features/LoginPage.feature",
     "tags": []
   }
 ]

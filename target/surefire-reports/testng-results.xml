@@ -2,35 +2,35 @@
 <testng-results skipped="0" failed="0" ignored="0" total="1" passed="1">
   <reporter-output>
   </reporter-output>
-  <suite name="Suite" duration-ms="43343" started-at="2024-11-28T07:17:43Z" finished-at="2024-11-28T07:18:27Z">
+  <suite name="Suite" duration-ms="16321" started-at="2025-11-19T03:40:36Z" finished-at="2025-11-19T03:40:52Z">
     <groups>
       <group name="cucumber scenarios">
         <method signature="TestRunner.scenario(io.cucumber.testng.PickleWrapper, io.cucumber.testng.FeatureWrapper)[pri:0, instance:com.qt.sid.bdd.Runner.TestRunner@62e136d3]" name="scenario" class="com.qt.sid.bdd.Runner.TestRunner"/>
       </group> <!-- cucumber scenarios -->
     </groups>
-    <test name="Test" duration-ms="43343" started-at="2024-11-28T07:17:43Z" finished-at="2024-11-28T07:18:27Z">
+    <test name="Test" duration-ms="16321" started-at="2025-11-19T03:40:36Z" finished-at="2025-11-19T03:40:52Z">
       <class name="com.qt.sid.bdd.Runner.TestRunner">
-        <test-method status="PASS" signature="setUpClass()[pri:0, instance:com.qt.sid.bdd.Runner.TestRunner@62e136d3]" name="setUpClass" is-config="true" duration-ms="1645" started-at="2024-11-28T07:17:43Z" finished-at="2024-11-28T07:17:45Z">
+        <test-method status="PASS" signature="setUpClass()[pri:0, instance:com.qt.sid.bdd.Runner.TestRunner@62e136d3]" name="setUpClass" is-config="true" duration-ms="1475" started-at="2025-11-19T03:40:36Z" finished-at="2025-11-19T03:40:37Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- setUpClass -->
-        <test-method status="PASS" signature="scenario(io.cucumber.testng.PickleWrapper, io.cucumber.testng.FeatureWrapper)[pri:0, instance:com.qt.sid.bdd.Runner.TestRunner@62e136d3]" name="scenario" duration-ms="40692" started-at="2024-11-28T07:17:45Z" data-provider="scenarios" finished-at="2024-11-28T07:18:26Z">
+        <test-method status="PASS" signature="scenario(io.cucumber.testng.PickleWrapper, io.cucumber.testng.FeatureWrapper)[pri:0, instance:com.qt.sid.bdd.Runner.TestRunner@62e136d3]" name="scenario" duration-ms="13124" started-at="2025-11-19T03:40:38Z" data-provider="scenarios" finished-at="2025-11-19T03:40:51Z">
           <params>
             <param index="0">
               <value>
-                <![CDATA["Verify user is able to login and select course"]]>
+                <![CDATA["Verify Login and Logout functionality"]]>
               </value>
             </param>
             <param index="1">
               <value>
-                <![CDATA["Optional[User is able to navigate to landing Page]"]]>
+                <![CDATA["Optional[Role popup and MobileNumber popup in Login Page]"]]>
               </value>
             </param>
           </params>
           <reporter-output>
           </reporter-output>
         </test-method> <!-- scenario -->
-        <test-method status="PASS" signature="tearDownClass()[pri:0, instance:com.qt.sid.bdd.Runner.TestRunner@62e136d3]" name="tearDownClass" is-config="true" duration-ms="673" started-at="2024-11-28T07:18:26Z" finished-at="2024-11-28T07:18:27Z">
+        <test-method status="PASS" signature="tearDownClass()[pri:0, instance:com.qt.sid.bdd.Runner.TestRunner@62e136d3]" name="tearDownClass" is-config="true" duration-ms="1425" started-at="2025-11-19T03:40:51Z" finished-at="2025-11-19T03:40:52Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- tearDownClass -->

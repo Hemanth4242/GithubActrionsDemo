@@ -37,6 +37,7 @@ com\qt\sid\bdd\pages\LeaningResourcesPage.class
 com\qt\sid\bdd\pages\Dashboard.class
 com\qt\sid\bdd\pages\TrainingPage.class
 com\qt\sid\bdd\utils\EnvironmentConstants.class
+reportsGenerator\CucumberReportGenerator.class
 com\qt\sid\bdd\pages\PractisePage.class
 com\qt\sid\bdd\pages\AboutUSPage.class
 com\qt\sid\bdd\pages\OpportunitiesPage.class
