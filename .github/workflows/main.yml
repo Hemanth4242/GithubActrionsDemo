@@ -1,0 +1,86 @@
+name: Run Tests and Deploy Report
+
+permissions:
+  contents: write
+
+on:
+  workflow_dispatch:
+  push:
+    branches: [ master ]
+    paths-ignore:
+      - 'docs/**'            # ignore docs/ pushes so your push-back won't re-trigger
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout code
+        uses: actions/checkout@v4
+        with:
+          fetch-depth: 0            # ensure full history for pushes and branch refs
+          persist-credentials: true # allows pushes using GITHUB_TOKEN
+
+      - name: Set up Java 17
+        uses: actions/setup-java@v4
+        with:
+          distribution: 'temurin'
+          java-version: '17'
+          cache: 'maven'
+
+      - name: Show repo info (diagnostics)
+        run: |
+          echo "Current branch: $GITHUB_REF"
+          git status --porcelain
+          git branch -avv
+          ls -la
+
+      - name: Cache Maven packages
+        uses: actions/cache@v4
+        with:
+          path: ~/.m2/repository
+          key: ${{ runner.os }}-maven-${{ hashFiles('**/pom.xml') }}
+          restore-keys: |
+            ${{ runner.os }}-maven-
+
+      - name: Build (compile only, no tests)
+        run: mvn -B -U -DskipTests package
+
+      - name: Run Tests
+        continue-on-error: false
+        run: mvn -B test
+
+      - name: Show test results & target directory (diagnostics)
+        run: |
+          echo "=== target listing ==="
+          ls -la target || true
+          echo "=== cucumber json (if produced) ==="
+          find target -type f -name "cucumber*.json" -print || true
+          echo "=== surefire-reports ==="
+          ls -la target/surefire-reports || true
+
+      - name: Generate cucumber HTML report (exec:java)
+        # use -Dexec.classpathScope=test so test classes are visible to the generator
+        run: mvn -B -Dexec.classpathScope=test exec:java -Dexec.mainClass="reportsGenerator.CucumberReportGenerator"
+
+      - name: Dump generated report dir (debug)
+        run: |
+          echo "Report dir exists?:"
+          if [ -d "target/cucumber-reports" ]; then ls -la target/cucumber-reports; else echo "NO target/cucumber-reports"; fi
+
+      - name: Upload HTML report artifact
+        uses: actions/upload-artifact@v4
+        with:
+          name: cucumber-html-report
+          path: target/cucumber-reports
+
+      # Optional: commit reports back to the repo (commented out — safer to use artifacts)
+      # - name: Commit HTML report to repo
+      #   if: false
+      #   env:
+      #     GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+      #   run: |
+      #     git config --global user.name 'github-actions'
+      #     git config --global user.email 'github-actions@github.com'
+      #     git add docs/
+      #     git commit -m "Update Cucumber HTML Report [skip ci]" || echo "No changes to commit"
+      #     git push https://x-access-token:${GITHUB_TOKEN}@github.com/${{ github.repository }} HEAD:master
