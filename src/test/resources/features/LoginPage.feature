@@ -1,7 +1,7 @@
 Feature: Role popup and MobileNumber popup in Login Page
   Description: The purpose of this feature is to test role popup and mobile number popu
 
-# 3.8.0 maven-compiler-plugin
+# 3.8.0 maven-compiler-plugin test
   @GithubActions
   Scenario: Verify Login and Logout functionality
     Given i navigate to Landing page
